@@ -30,15 +30,15 @@ class ProductTest extends TestCase
         $user = User::factory()->create();
         $response = $this->actingAs($user);
         $response->get('/buku')
-        ->assertSeeText('DATA BUKU')
-        ->assertSeeText('ID Buku')
-        ->assertSeeText('Judul')
-        ->assertSeeText('Penerbit')
-        ->assertSeeText('Pengarang')
-        ->assertSeeText('Jenis')
-        ->assertSeeText('Stok')
-        ->assertSeeText('Action')
-        ->assertStatus(200);
+            ->assertSeeText('DATA BUKU')
+            ->assertSeeText('ID Buku')
+            ->assertSeeText('Judul')
+            ->assertSeeText('Penerbit')
+            ->assertSeeText('Pengarang')
+            ->assertSeeText('Jenis')
+            ->assertSeeText('Stok')
+            ->assertSeeText('Action')
+            ->assertStatus(200);
     }
 
     public function test_store_buku()

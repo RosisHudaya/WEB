@@ -27,23 +27,23 @@
                     </div> -->
                     <div class="form-group">
                         <label for="Judul">Judul</label> 
-                        <input type="text" name="Judul" class="form-control" id="Judul" aria-describedby="Judul" > 
+                        <input type="text" name="judul" class="form-control" id="judul" aria-describedby="judul" > 
                     </div>
                     <div class="form-group">
                         <label for="Penerbit">Penerbit</label> 
-                        <input type="Penerbit" name="Penerbit" class="form-control" id="Penerbit" aria-describedby="Penerbit" > 
+                        <input type="Penerbit" name="penerbit" class="form-control" id="penerbit" aria-describedby="penerbit" > 
                     </div>
                     <div class="form-group">
                         <label for="Pengarang">Pengarang</label> 
-                        <input type="Pengarang" name="Pengarang" class="form-control" id="Pengarang" aria-describedby="password" > 
+                        <input type="Pengarang" name="pengarang" class="form-control" id="pengarang" aria-describedby="pengarang" > 
                     </div>
                     <div class="form-group">
                         <label for="Jenis">Jenis</label> 
-                        <input type="Jenis" name="Jenis" class="form-control" id="Jenis" aria-describedby="Jenis" > 
+                        <input type="Jenis" name="jenis" class="form-control" id="jenis" aria-describedby="jenis" > 
                     </div>
                     <div class="form-group">
                         <label for="Stok">Stok</label> 
-                        <input type="Stok" name="Stok" class="form-control" id="Stok" aria-describedby="Stok" > 
+                        <input type="Stok" name="stok" class="form-control" id="stok" aria-describedby="stok" > 
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

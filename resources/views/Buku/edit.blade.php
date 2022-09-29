@@ -28,24 +28,24 @@
                         <input type="text" name="Id_Buku" class="form-control" id="Id_Buku" value="{{ $Buku->id_buku }}" aria-describedby="Id_Buku">
                     </div> -->
                     <div class="form-group">
-                        <label for="Judul">Judul</label>
-                        <input type="Judul" name="Judul" class="form-control" id="Judul" value="{{ $Buku->judul }}" aria-describedby="Judul">
+                        <label for="judul">Judul</label>
+                        <input type="judul" name="judul" class="form-control" id="judul" value="{{ $Buku->judul }}" aria-describedby="judul">
                     </div>
                     <div class="form-group">
-                        <label for="Penerbit">Penerbit</label>
-                        <input type="Judul" name="Penerbit" class="form-control" id="Penerbit" value="{{ $Buku->penerbit }}" aria-describedby="Penerbit">
+                        <label for="penerbit">Penerbit</label>
+                        <input type="penerbit" name="penerbit" class="form-control" id="penerbit" value="{{ $Buku->penerbit }}" aria-describedby="penerbit">
                     </div>
                     <div class="form-group">
-                        <label for="Pengarang">Pengarang</label>
-                        <input type="Pengarang" name="Pengarang" class="form-control" id="Pengarang" value="{{ $Buku->pengarang }}" aria-describedby="Pengarang">
+                        <label for="pengarang">Pengarang</label>
+                        <input type="pengarang" name="pengarang" class="form-control" id="Pengarang" value="{{ $Buku->pengarang }}" aria-describedby="pengarang">
                     </div>
                     <div class="form-group">
-                        <label for="Jenis">Jenis</label>
-                        <input type="Jenis" name="Jenis" class="form-control" id="Jenis" value="{{ $Buku->jenis }}" aria-describedby="Jenis">
+                        <label for="jenis">Jenis</label>
+                        <input type="jenis" name="jenis" class="form-control" id="jenis" value="{{ $Buku->jenis }}" aria-describedby="jenis">
                     </div>
                     <div class="form-group">
-                        <label for="Stok">Stok</label>
-                        <input type="number" name="Stok" class="form-control" id="Stok" value="{{ $Buku->stok }}" aria-describedby="Stok">
+                        <label for="stok">Stok</label>
+                        <input type="number" name="stok" class="form-control" id="stok" value="{{ $Buku->stok }}" aria-describedby="stok">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button class="btn btn-success" href="{{ route('buku.index') }}">Kembali</button>

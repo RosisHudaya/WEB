@@ -58,10 +58,10 @@ class BukuController extends Controller
         //melakukan validasi data
         $request->validate([
             // 'Id_Buku' => 'required',
-            'Judul' => 'required',
-            'Penerbit' => 'required',
-            'Pengarang' => 'required',
-            'Jenis' => 'required',
+            'judul' => 'required',
+            'penerbit' => 'required',
+            'pengarang' => 'required',
+            'jenis' => 'required',
             // 'Stok '=> 'required',  
         ]);
         //fungsi eloquent untuk menambah data
@@ -110,10 +110,10 @@ class BukuController extends Controller
     {
         $request->validate([
             // 'Id_Buku' => 'required',
-            'Judul' => 'required',
-            'Penerbit' => 'required',
-            'Pengarang' => 'required',
-            'Jenis' => 'required', 
+            'judul' => 'required',
+            'penerbit' => 'required',
+            'pengarang' => 'required',
+            'jenis' => 'required', 
             // 'Stok' => 'required', 
         ]);
 
@@ -121,11 +121,11 @@ class BukuController extends Controller
         Buku::where('id_buku', $id)
         ->update([
             // 'Id_Buku' => $request->id_buku,
-            'judul'=>$request->Judul,
-            'penerbit'=>$request->Penerbit,
-            'pengarang'=>$request->Pengarang,
-            'jenis' => $request->Jenis,
-            'stok'=> $request->Stok, 
+            'judul'=>$request->judul,
+            'penerbit'=>$request->penerbit,
+            'pengarang'=>$request->pengarang,
+            'jenis' => $request->jenis,
+            'stok'=> $request->stok, 
 ]);
     //jika data berhasil diupdate, akan kembali ke halaman utama
     return redirect()->route('buku.index')

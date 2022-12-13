@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/mysql', function () {
-    Artisan::call('rollback', ['--force' => true]);
+    Artisan::call('migrate:rollback', ['--force' => true]);
     Artisan::call('migrate', ['--force' => true]);
     Artisan::call('db:seed', ['--force' => true]);
 });

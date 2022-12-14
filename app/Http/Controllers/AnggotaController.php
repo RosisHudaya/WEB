@@ -23,7 +23,7 @@ class AnggotaController extends Controller
                 ->orwhere('nama_ag', 'like', '%' . request('search') . '%')
                 ->orwhere('alamat', 'like', '%' . request('search') . '%')
                 ->orwhere('jenis_kelamin', 'like', '%' . request('search') . '%')->paginate(5);
-            return view('anggota.index', ['paginate' => $paginate]);
+            return view('Anggota.index', ['paginate' => $paginate]);
         } else {
             $anggota = Anggota::all(); 
             $paginate = Anggota::orderBy('id', 'asc')->paginate(5);
@@ -38,7 +38,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        return view('anggota.create');
+        return view('Anggota.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class AnggotaController extends Controller
             'foto' => 'images/profile/default.png',
         ]);
 
-        return redirect()->route('anggota.index')
+        return redirect()->route('Anggota.index')
             ->with('success', 'Anggota Berhasil Ditambahkan');
     }
 
@@ -71,7 +71,7 @@ class AnggotaController extends Controller
     public function show($id)
     {
         $anggota = DB::table('anggota')->where('id', $id)->first();
-        return view('anggota.detail', compact('anggota'));
+        return view('Anggota.detail', compact('anggota'));
     }
 
     /**
@@ -83,7 +83,7 @@ class AnggotaController extends Controller
     public function edit($id)
     {
         $anggota = DB::table('anggota')->where('id', $id)->first();
-        return view('anggota.edit', compact('anggota'));
+        return view('Anggota.edit', compact('anggota'));
     }
 
     /**
@@ -120,7 +120,7 @@ class AnggotaController extends Controller
         $anggota->jenis_kelamin = $request->get('jenis_kelamin');
         $anggota->save();
         $anggota->save();
-        return redirect()->route('anggota.index')->with('success', 'Data Anggota Berhasil Diupdate');
+        return redirect()->route('Anggota.index')->with('success', 'Data Anggota Berhasil Diupdate');
     }
 
     /**
@@ -139,7 +139,7 @@ class AnggotaController extends Controller
 
     public function cetak($id){
         $anggota = DB::table('anggota')->where('id', $id)->first();
-        $pdf = PDF::loadview('anggota.kartu',['anggota'=>$anggota]);
+        $pdf = PDF::loadview('Anggota.kartu',['anggota'=>$anggota]);
         return $pdf->stream();
     }
 

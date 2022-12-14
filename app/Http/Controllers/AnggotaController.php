@@ -75,7 +75,7 @@ class AnggotaController extends Controller
             //filename to store
             $filenametostore = $filename . '_' . uniqid() . '.' . $extension;
 
-            Storage::put('public/' . $filenametostore, fopen($request->file('foto'), 'r+'));
+            Storage::put('app/public/' . $filenametostore, fopen($request->file('foto'), 'r+'));
 
             $filepath = storage_path('app/public/' . $filenametostore);
 

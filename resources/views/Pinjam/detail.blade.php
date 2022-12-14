@@ -20,7 +20,7 @@
                   <li class="list-group-item"><b>Denda : </b>{{$Pinjam->denda}}</li>
                 </ul>
             </div>
-            <a class="btn btn-success mt-3" href="{{ route('pinjam.index') }}">Kembali</a>
+            <a class="btn btn-success mt-3" href="{{ route('Pinjam.index') }}">Kembali</a>
         </div>
     </div>
 </div>

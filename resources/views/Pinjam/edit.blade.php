@@ -20,7 +20,7 @@
                     </ul>
                 </div>
                 @endif
-                <form method="post" action="{{ route('pinjam.update', $pinjam->id) }}" id="myForm">
+                <form method="post" action="{{ route('Pinjam.update', $pinjam->id) }}" id="myForm">
                     @csrf
                     @method('PUT')
                     <div class="form-group">

@@ -25,12 +25,12 @@ class PinjamController extends Controller
                 ->orwhere('tanggal_pinjam', 'like', '%' . request('search') . '%')
                 ->orwhere('tanggal_kembali', 'like', '%' . request('search') . '%')
                 ->orwhere('status', 'like', '%' . request('search') . '%')->paginate(5);
-            return view('pinjam.index', ['paginate' => $paginate]);
+            return view('Pinjam.index', ['paginate' => $paginate]);
         } else {
             $pinjam_a = Pinjam::with('anggota')->get();
             $pinjam_b = Pinjam::with('buku')->get();
             $paginate = Pinjam::orderBy('id','asc')->paginate(5);
-            return view('pinjam.index', ['pinjam_a' => $pinjam_a, 'pinjam_b' => $pinjam_b ,'paginate' => $paginate]);
+            return view('Pinjam.index', ['pinjam_a' => $pinjam_a, 'pinjam_b' => $pinjam_b ,'paginate' => $paginate]);
       }
     }
 
@@ -45,7 +45,7 @@ class PinjamController extends Controller
         $pinjam_b= Buku::all(); //mendapatkan data dari tabel 
         $pinjam= Pinjam::all(); //mendapatkan data dari tabel 
 
-        return view('pinjam.create',['pinjam_a'=> $pinjam_a , 'pinjam_b'=>$pinjam_b,'pinjam'=>$pinjam]);
+        return view('Pinjam.create',['pinjam_a'=> $pinjam_a , 'pinjam_b'=>$pinjam_b,'pinjam'=>$pinjam]);
     }
 
     /**
@@ -82,7 +82,7 @@ class PinjamController extends Controller
 
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('pinjam.index')
+        return redirect()->route('Pinjam.index')
         ->with('success','Peminjaman Berhasil Ditambahakan');
         
     }
@@ -157,7 +157,7 @@ class PinjamController extends Controller
         }
         $pinjam->save();
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('pinjam.index')
+        return redirect()->route('Pinjam.index')
         ->with('success','Data Peminjaman berhasil di update');
         
     }
@@ -172,7 +172,7 @@ class PinjamController extends Controller
     {
          //fungsi eloquent untuk menghapus data
          Pinjam::where('id', $id)->delete();
-         return redirect()->route('pinjam.index')
+         return redirect()->route('Pinjam.index')
              ->with('success', 'Data Berhasil Dihapus');
     }
 

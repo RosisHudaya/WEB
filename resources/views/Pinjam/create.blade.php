@@ -19,7 +19,7 @@
                     </ul>
                 </div>
                 @endif
-                <form method="post" action="{{ route('pinjam.store') }}" id="myForm">
+                <form method="post" action="{{ route('Pinjam.store') }}" id="myForm">
                     @csrf
                     <div class="form-group">
                         <label for="id">Nama</label>

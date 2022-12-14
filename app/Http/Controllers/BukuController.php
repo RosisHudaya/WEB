@@ -43,7 +43,7 @@ class BukuController extends Controller
      */
     public function create()
     {
-        return view('buku.create');
+        return view('Buku.create');
 
     }
 
@@ -68,7 +68,7 @@ class BukuController extends Controller
         Buku::create($request->all());
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('buku.index')
+        return redirect()->route('Buku.index')
         ->with('success', 'Buku Berhasil Ditambahkan');
     }
 
@@ -82,7 +82,7 @@ class BukuController extends Controller
     {
         //menampilkan detail data dengan menemukan/berdasarkan Nim Mahasiswa
         $Buku = Buku::where('id_buku', $id)->first();
-        return view('buku.detail', compact('Buku'));
+        return view('Buku.detail', compact('Buku'));
 
     }
 
@@ -96,7 +96,7 @@ class BukuController extends Controller
     {
         //menampilkan detail data 
         $Buku = DB::table('buku')->where('id_buku', $id)->first();
-        return view('buku.edit', compact('Buku'));
+        return view('Buku.edit', compact('Buku'));
     }
 
     /**
@@ -128,7 +128,7 @@ class BukuController extends Controller
             'stok'=> $request->stok, 
 ]);
     //jika data berhasil diupdate, akan kembali ke halaman utama
-    return redirect()->route('buku.index')
+    return redirect()->route('Buku.index')
     ->with('success', 'Buku Berhasil Diupdate');
 }
 
@@ -144,7 +144,7 @@ class BukuController extends Controller
         //fungsi eloquent untuk menghapus data
         Pinjam::where('id_buku', $id)->delete();
         Buku::where('id_buku', $id)->delete();
-        return redirect()->route('buku.index')
+        return redirect()->route('Buku.index')
         -> with('success', 'Buku Berhasil Dihapus');
 
     }

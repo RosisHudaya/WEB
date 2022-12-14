@@ -1,4 +1,4 @@
-@extends('buku.layout')
+@extends('Buku.layout')
 
 @section('content')
 <div class="container mt-5">

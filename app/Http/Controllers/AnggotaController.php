@@ -27,7 +27,7 @@ class AnggotaController extends Controller
         } else {
             $anggota = Anggota::all(); 
             $paginate = Anggota::orderBy('id', 'asc')->paginate(5);
-            return view('anggota.index', ['anggota' => $anggota, 'paginate' => $paginate]);
+            return view('Anggota.index', ['anggota' => $anggota, 'paginate' => $paginate]);
         }
     }
 

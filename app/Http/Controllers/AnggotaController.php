@@ -6,8 +6,10 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Anggota;
 use App\Models\Pinjam;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use PDF;
+use Illuminate\Support\Facades\Storage;
+use Google\Cloud\Storage\StorageClient;
+use Illuminate\Support\Facades\URL;
 
 class AnggotaController extends Controller
 {
@@ -49,13 +51,50 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
+       
+        if ($request->file('foto')) {
+            $image_name = $request->file('foto');
+            // $image_name = $request->file('foto')->store('images', 'public');
+            $storage = new StorageClient([
+                'keyFilePath' => public_path('key.json')
+            ]);
 
+            $bucketName = env('GOOGLE_CLOUD_BUCKET');
+            $bucket = $storage->bucket($bucketName);
+
+            //get filename with extension
+            $filenamewithextension = pathinfo($request->file('foto')->getClientOriginalName(), PATHINFO_FILENAME);
+            // $filenamewithextension = $request->file('foto')->getClientOriginalName();
+
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+            //get file extension
+            $extension = $request->file('foto')->getClientOriginalExtension();
+
+            //filename to store
+            $filenametostore = $filename . '_' . uniqid() . '.' . $extension;
+
+            Storage::put('public/uploads/' . $filenametostore, fopen($request->file('foto'), 'r+'));
+
+            $filepath = storage_path('app/public/uploads/' . $filenametostore);
+
+            $object = $bucket->upload(
+                fopen($filepath, 'r'),
+                [
+                    'predefinedAcl' => 'publicRead'
+                ]
+            );
+
+            // delete file from local disk
+            Storage::delete('public/uploads/' . $filenametostore);
+        }
         Anggota::create([
             'nama_ag' => $request->nama,
             'alamat' => $request->alamat,
             'ttl' => $request->ttl,
             'jenis_kelamin' => $request->jenis_kelamin,
-            'foto' => 'images/profile/default.png',
+            'foto' => $filenametostore,
         ]);
 
         return redirect()->route('Anggota.index')

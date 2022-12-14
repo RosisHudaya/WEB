@@ -1,4 +1,4 @@
-@extends('buku.layout')
+@extends('Buku.layout')
 
 @section('content')
 <div class="container mt-5">
@@ -17,7 +17,7 @@
                   <li class="list-group-item"><b>Stok : </b>{{$Buku->stok}}</li>
                 </ul>
             </div>
-            <a class="btn btn-success mt-3" href="{{ route('buku.index') }}">Kembali</a>
+            <a class="btn btn-success mt-3" href="{{ route('Buku.index') }}">Kembali</a>
         </div>
     </div>
 </div>

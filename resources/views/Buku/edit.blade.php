@@ -1,4 +1,4 @@
-@extends('buku.layout')
+@extends('Buku.layout')
 
 @section('content')
 
@@ -20,7 +20,7 @@
                     </ul>
                 </div>
                 @endif
-                <form method="post" action="{{ route('buku.update', $Buku->id_buku) }}" id="myForm">
+                <form method="post" action="{{ route('Buku.update', $Buku->id_buku) }}" id="myForm">
                     @csrf
                     @method('PUT')
                     <!-- <div class="form-group">

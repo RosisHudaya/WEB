@@ -26,12 +26,12 @@ class BukuController extends Controller
                 ->orwhere('pengarang', 'like', '%' . request('search') . '%')
                 ->orwhere('jenis', 'like', '%' . request('search') . '%')
                 ->orwhere('stok', 'like', '%' . request('search') . '%')->paginate(5);
-            return view('buku.index', ['paginate' => $paginate]);
+            return view('Buku.index', ['paginate' => $paginate]);
         } else {
             //fungsi eloquent menampilkan data menggunakan pagination
             $buku = Buku::all(); // Mengambil semua isi tabel
             $paginate = Buku::orderBy('id_buku', 'asc')->paginate(5);
-            return view('buku.index', ['buku' => $buku, 'paginate' => $paginate]);
+            return view('Buku.index', ['buku' => $buku, 'paginate' => $paginate]);
       }
 
     }

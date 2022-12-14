@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hardy-tine-371213",
+  "private_key_id": "68ea1d672efb2182000c47c42850ef4960033a2a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqPwSHaZrK44Ie\ndxgCd1xVboS7W/bxevswH+xWOKMMXzlfVp7Lr3m/vXzV0/Lio4qDNRgsSPUlZ0o2\nl6oQ61Pkw3k6QFiuoWX4QblutXNQvAw1uvpOz91F7I+vbk8dhQgHqs9w7w7Sivlz\n9EvDjFgz2FpnFVytwXSAp7Dvn17q6VKWToR7XqDbPhj2wWK93uGX46S8Uu0MHL43\nvpuxWApMxACNHR4HhgX6EhbaFFXABK3jHthBxxBDUZlHn2x5dusON828AH++GNHP\nZsGNiw8ODeaVcuuhRwUr3L6thWdobeuboxrplzjSgxflZezLGG/wSMYzF9abN43H\nBSSA7JpFAgMBAAECggEAU+VKLhD0nxcOgETgKBb6AX+9GTdwsf+Q2V5h8PtoHiiu\n9TSSfH202bBfXGBeSSGemJoJl4k8hXopME39GOlfJlTN4M7k5OnUfkqlPtFcSmTg\n/3ls8Hmu6U5yYFlT05BDLMQYBedIvqiN1X6F94+px6LOqg305gt3hg8dOninJcuV\nkSpH7XsREwg83cUsDfgfnJI272SpYL+vbz9gc6fLHhnTLfCpa7c2zftP19lG4Ei5\nhFOSTFnZxpuj71gb6Qmh59Mi3f6TnIJsGDVU9gH1fwfvWmIpVZlIh0Xi45HgVtuR\npHQp+a04V4XHJZ7ssp4fb3KscDagdSCGoZrsXMve4QKBgQDv16+FwEH3ziXL/rUg\ntkEy1JeO3e7ZT/CXtc5xINtzA6s7apobM/loHRBKhALFp9Ktt9I/82s8F0N7Ugtn\n/gH9+0y5VT0K+44jC4UOMQdffNL2YkcLZFjolLk9cjyH7k73fSsrO7vq0E6QbG7t\nUJfGIT3EoXye+ekHcY7STidngwKBgQC1txN6EmiT4tnnFFBps5+ar+DTVdVTzZpM\nT3hxsLLh8JiJt+Ii4Pzm39gGpsj28E+6LyCIlIZEaQQT2ld+zDOWP9ajpLT8L8FX\nG2GASX+59ZIUxWQH35CXey+ZgeOykxMnnExR/K+YzIJI20Vby9bz5RgaFj4vOtKm\nBg5nEEWElwKBgQC8nG9JzYGTMKiEnc8u5GStZoWxMlJszvKzO6QXTvGEpzP3S8PY\n9KyD9ackEmBjs7B4MIDFDdYcsWa+Ci0yIIzMgN07Og8BHgYPBTYjjObxbqYwX+Ti\nzo0kiiCKc9WqR/wNoH9cRmNnK109Miihs6lHhEig4yWvl3RsCB96vz85pQKBgQCL\nlinBAPkSeRVX+/PVbqTw55/11556tJqNehKUit6uzunuCLIOhvPeyh6g5WfEwU8N\nP3xnTmhhjqYSNgw2G9iY10sjA7f/bRPAvQjFyi/ygmCH0iWIIsVoh7lF21A08eOp\n7td1t3yQDLEcFEwQOuJREi/UgjecgjwkSsyvgQFV2wKBgHmlijf1FikSQvCKnnap\nVsCbQKuB71Z/HjL28JzTNc0aWgm97vSJpmtD3gc9TGK+x2tiRH/+BOAv5NOyyF6g\n9KR0hhb0OAMQGue4iKPQI0J1eF3Fj9N2cXmIl733oKklf/dbzCgGAS+Fg0ARE/Vi\nkBxA6Al/90uDd8h1Iw26IQNe\n-----END PRIVATE KEY-----\n",
+  "client_email": "bucket-awan@hardy-tine-371213.iam.gserviceaccount.com",
+  "client_id": "110018694057430917013",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bucket-awan%40hardy-tine-371213.iam.gserviceaccount.com"
+}

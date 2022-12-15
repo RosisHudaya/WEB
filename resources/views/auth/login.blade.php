@@ -10,7 +10,8 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <img class="col-lg-6 d-none d-lg-block" src="{{ asset('img/perpus (2).jpg') }}">
+                    <!-- <img class="col-lg-6 d-none d-lg-block" src="{{ asset('img/perpus (2).jpg') }}"> -->
+                    <img class="col-lg-6 d-none d-lg-block" src="https://storage.googleapis.com/bucket-awan/perpus%20(2).jpg">
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="col-md-10">
